@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Legal Notice under Section 138 NI Act</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.8;
+            margin: 1.5cm;
+            text-align: justify;
+        }
+        .center { text-align: center; }
+        .right { text-align: right; }
+        .bold { font-weight: bold; }
+        .signature { margin-top: 60px; }
+        .footer { margin-top: 40px; font-size: 0.9em; }
+        .stamp { background: #FEF3C7; padding: 10px; border-left: 4px solid #F59E0B; margin: 15px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="right">
+        <strong>Date:</strong> {{ today }}<br>
+        <strong>Ref:</strong> {{ ref_number }}
+    </div>
+    <br>
+
+    <strong>To,</strong><br>
+    {{ accused_name }},<br>
+    {{ accused_address }}<br>
+    {{ accused_pincode }}<br>
+    <br>
+
+    <strong>Subject: Legal Notice under Section 138 of the Negotiable Instruments Act, 1881 – Dishonour of Cheque No. {{ cheque_number }}</strong>
+    <br><br>
+
+    Dear Sir/Madam,
+    <br><br>
+
+    Under instructions from my client, <strong>{{ client_name }}</strong>, {{ client_address }} (hereinafter referred to as “the Client”), I hereby serve upon you the following legal notice:
+    <br><br>
+
+    <strong>1.</strong> That you had approached my client on or around <strong>{{ transaction_date }}</strong> for {{ transaction_purpose }} and agreed to pay a sum of ₹{{ amount }} ({{ amount_in_words }} only) towards the same.
+    <br><br>
+
+    <strong>2.</strong> That in pursuance of the said agreement, you issued Cheque No. <strong>{{ cheque_number }}</strong> dated <strong>{{ cheque_date }}</strong> drawn on <strong>{{ bank_name }}</strong>, {{ bank_branch }}, for ₹{{ amount }}, in discharge of legally enforceable debt.
+    <br><br>
+
+    <strong>3.</strong> That the said cheque was presented for payment to the bank on <strong>{{ presentation_date }}</strong> but was returned with the endorsement "<strong>{{ return_reason }}</strong>".
+    <br><br>
+
+    <strong>4.</strong> That my client received intimation of dishonour on <strong>{{ intimation_date }}</strong> via return memo from the bank.
+    <br><br>
+
+    <strong>5.</strong> That despite several reminders, you have failed to make payment of the said amount.
+    <br><br>
+
+    <strong>6.</strong> That your conduct amounts to an offence under Section 138 of the Negotiable Instruments Act, 1881, punishable with imprisonment up to 2 years and/or fine up to twice the amount of the cheque.
+    <br><br>
+
+    <strong>7.</strong> That this notice is issued to call upon you to make full payment of ₹{{ amount }} within 15 days from the date of receipt of this notice.
+    <br><br>
+
+    <strong>8.</strong> Failure to pay the said amount within the stipulated period will compel my client to initiate appropriate legal proceedings against you in a court of law, without further notice.
+    <br><br>
+
+    <strong>9.</strong> This is without prejudice to all other rights and remedies available to my client under law.
+    <br><br>
+
+    <strong>10.</strong> A sum of ₹{{ notice_cost }} is recoverable as cost of this notice.
+    <br><br>
+
+    <div class="signature">
+        <p style="text-align: right;">Yours faithfully,<br><br>
+        _______________________<br>
+        <strong>{{ advocate_name }}</strong><br>
+        Advocate for {{ client_name }}<br>
+        Encl.: Copy of Cheque, Bank Return Memo
+        </p>
+    </div>
+
+    <div class="footer">
+        <p><strong>Note:</strong> This notice is printed on ₹{{ stamp_value }} non-judicial stamp paper and sent via Registered Post AD / Speed Post.</p>
+    </div>
+
+    <div class="stamp">
+        <strong>Verification:</strong> I, {{ client_name }}, do hereby verify that the contents of this notice are true to my knowledge.
+    </div>
+
+</body>
+</html>

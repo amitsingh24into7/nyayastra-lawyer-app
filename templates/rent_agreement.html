@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Residential Rental Agreement</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.8;
+            margin: 1.5cm;
+            text-align: justify;
+        }
+        .center { text-align: center; }
+        .bold { font-weight: bold; }
+        .signature { margin-top: 60px; }
+        .annexure { margin-top: 30px; }
+        .footer { margin-top: 40px; font-size: 0.9em; }
+        .stamp { background: #FEF3C7; padding: 10px; border-left: 4px solid #F59E0B; margin: 15px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="center">
+        <strong>RENTAL AGREEMENT</strong>
+    </div>
+    <br>
+
+    This RENTAL AGREEMENT is executed at <strong>{{ agreement_city }}</strong> on this <strong>{{ execution_date }}</strong> day of <strong>{{ execution_month }}</strong>, <strong>{{ execution_year }}</strong> by and between:
+    <br><br>
+
+    <strong>{{ landlord_name }}</strong>, S/o or D/o <strong>{{ landlord_father_name }}</strong>,
+    <br>
+    <strong>{{ landlord_address }}</strong>
+    <br>
+    (hereinafter jointly and severally called the “OWNER”, which expression shall include their heirs, legal representatives, successors and assigns) of the ONE PART: AND, in favour of:
+    <br><br>
+
+    <strong>{{ tenant_name }}</strong>, S/o or D/o <strong>{{ tenant_father_name }}</strong>,
+    <br>
+    Working/Studying at <strong>{{ tenant_occupation_place }}</strong>,
+    <br>
+    having a permanent address at <strong>{{ tenant_address }}</strong>
+    <br>
+    (hereinafter called the “TENANT”, which expression shall include its legal representatives, successors and assigns) of the OTHER PART.
+    <br><br>
+
+    <strong>WHEREAS</strong> the Owner is the absolute owner of the property situated at <strong>{{ property_address }}</strong> as detailed in Annexure-I, hereinafter referred to as "Demised Premises".
+    <br><br>
+
+    <strong>WHEREAS</strong> the Tenant has requested the Owner to grant Rent with respect to the Schedule Premises and the Owner has agreed to rent out to the Tenant the Property with two-wheeler and four-wheeler parking space in the ground floor for residential purposes only, on the following terms and conditions:
+    <br><br>
+
+    <strong>NOW THIS DEED WITNESSETH AS FOLLOWS:</strong>
+    <br><br>
+
+    <strong>1.</strong> The rent in respect of the “Demised Premises” shall commence from <strong>{{ start_date }}</strong> and shall be valid till <strong>{{ end_date }}</strong>. Thereafter, the same may be extended further on mutual consent of both the parties.
+    <br><br>
+
+    <strong>2.</strong> That the Tenant shall pay to the Owner a monthly rent of Rs. <strong>{{ monthly_rent }}</strong>, excluding electricity and water bill. The rent shall be paid on or before 7th day of each month without fail.
+    <br><br>
+
+    <strong>3.</strong> That the Tenant shall pay to the Owner a monthly maintenance charge of Rs. <strong>{{ maintenance_charge }}</strong> towards the maintenance of Generator & Elevator, Salaries towards guards, Charges for Electricity Maintenance for Common Areas, Charges towards cleaning of Common Areas and towards maintaining the lawn.
+    <br><br>
+
+    <strong>4.</strong> That the Tenant shall pay for the running cost of elevator and generator separately to the Owner.
+    <br><br>
+
+    <strong>5.</strong> That during the Rent period, in addition to the rental amount payable to the Owner, the Tenant shall pay for the use of electricity and water as per bills received from the authorities concerned directly. For all the dues of electricity bills and water bills till the date the possession of the premises is handed over by the Owner to the Tenant it is the responsibility of the Owner to pay and clear them according to the readings on the respective meters. At the time of handing over possession of the premises back to the Owner by Tenant, it is the responsibility of the Tenant to pay electricity & water bills, as presented by the Departments concerned according to the readings on the respective meters upto the date of vacation of the property.
+    <br><br>
+
+    <strong>6.</strong> The Tenant will pay to the Owner an interest-free refundable security deposit of Rs. <strong>{{ security_deposit }}</strong> vide cheque no <strong>{{ cheque_number }}</strong> dated <strong>{{ cheque_date }}</strong> at the time of signing the Rent Agreement. The said amount of the Security deposit shall be refunded by the Owner to the Tenant at the time of handing over possession of the demised premises by the Tenant upon expiry or sooner termination of this Rent after adjusting any dues (if any) or cost towards damages caused by the negligence of the Tenant or the person he is responsible for, normal wear & tear and damages due to act of god exempted. In case the Owner fails to refund the security deposit to the Tenant on early termination or expiry of the Rent agreement, the Tenant is entitled to hold possession of the Rented premises, without payment of rent and/or any other charges whatsoever, till such time the Owner refunds the security deposit to the Tenant. This is without prejudice and in addition to the other remedies available to the Tenant to recover the amount from the Owner.
+    <br><br>
+
+    <strong>7.</strong> That all the sanitary, electrical and other fittings and fixtures and appliances in the premises shall be handed over from the Owner to the Tenant in good working condition.
+    <br><br>
+
+    <strong>8.</strong> That the Tenant shall not sublet, assign or part with the demised premises in whole or part thereof to any person in any circumstances whatsoever and the same shall be used for the bonafide residential purposes only.
+    <br><br>
+
+    <strong>9.</strong> That the day-to-day minor repairs will be the responsibility for the Tenant at his/her own expense. However, any structural or major repairs, if so required, shall be carried out by the Owner.
+    <br><br>
+
+    <strong>10.</strong> That no structural additions or alterations shall be made by the Tenant in the premises without the prior written consent of the Owner but the Tenant can install air-conditioners in the space provided and other electrical gadgets and make such changes for the purposes as may be necessary, at his own cost. On termination of the tenancy or earlier, the Tenant will be entitled to remove such equipment and restore the changes made, if any, to the original state.
+    <br><br>
+
+    <strong>11.</strong> That the Owner shall hold the right to visit in person or through his authorized agent(s), servants, workmen etc., to enter upon the demised premises for inspection (not exceeding once in a month) or to carry out repairs/ construction, as and when required.
+    <br><br>
+
+    <strong>12.</strong> That the Tenant shall comply with all the rules and regulations of the local authority applicable to the demised premises. The premises will be used only for residential purposes of its employees, families and guests.
+    <br><br>
+
+    <strong>13.</strong> That the Owner shall pay for all taxes/cesses levied on the premises by the local or government authorities in the way of property tax for the premises and so on. Further, any other payment in the nature of subscription or periodical fee to the welfare association shall be paid by the Owner.
+    <br><br>
+
+    <strong>14.</strong> That the Owner shall keep the Tenant free and harmless from any claims, proceedings, demands, or actions by others with respect to quiet possession of the premises.
+    <br><br>
+
+    <strong>15.</strong> That this Rent Agreement can be terminated before the expiry of this tenancy period by serving One month prior notice in writing by either party.
+    <br><br>
+
+    <strong>16.</strong> The Tenant shall maintain the Demised Premises in good and tenable condition and all the minor repairs such as leakage in the sanitary fittings, water taps and electrical usage etc. shall be carried out by the Tenant. That it shall be the responsibility of the Tenant to hand over the vacant and peaceful possession of the demised premises on expiry of the Rent period, or on its early termination, as stated hereinabove in the same condition subject to natural wear and tear.
+    <br><br>
+
+    <strong>17.</strong> That in case, where the Premises are not vacated by the Tenant, at the termination of the Rent period, the Tenant will pay damages calculated at two times the rent for any period of occupation commencing from the expiry of the Rent period. The payment of damages as aforesaid will not preclude the Owner from initiating legal proceedings against the Tenant for recovering possession of premises or for any other purpose.
+    <br><br>
+
+    <strong>18.</strong> That both the parties shall observe and adhere to the terms and conditions contained hereinabove.
+    <br><br>
+
+    <strong>19.</strong> That the Tenant and Owners represent and warrant that they are fully empowered and competent to make this Rent. That both the parties have read over and understood all the contents of this agreement and have signed the same without any force or pressure from any side.
+    <br><br>
+
+    <strong>20.</strong> In case of any dispute to this agreement and the clauses herein, the same will be settled in the jurisdiction of the <strong>{{ jurisdiction }}</strong> civil courts.
+    <br><br>
+
+    <strong>21.</strong> That the Rent Agreement will be registered in front of the Registrar and the charges towards stamp duty, court fee & lawyer/coordinator will be equally borne by the Owner and Tenant.
+    <br><br>
+
+    <div class="annexure">
+        <strong>ANNEXURE-I</strong><br>
+        The <strong>{{ property_address }}</strong> of the Property, consisting <strong>{{ bedrooms }}</strong> bedrooms, living room, family lounge, kitchen, servant room and inbuilt fittings & fixtures and inventory of <strong>{{ fans }}</strong> Fans, <strong>{{ lights }}</strong> CFL Lights, <strong>{{ geysers }}</strong> Geyser, <strong>{{ mirrors }}</strong> Mirrors.
+    </div>
+
+    <br><br>
+
+    <div class="signature">
+        <p>IN WITNESS WHEREOF BOTH PARTIES AGREE AND SIGN THIS AGREEMENT ON THIS DAY AND YEAR</p>
+        <br><br>
+        <table width="100%">
+            <tr>
+                <td width="50%" class="center">
+                    _______________________<br>
+                    <strong>{{ landlord_name }}</strong><br>
+                    [Digital Signature / Thumb Impression]<br>
+                    OWNER
+                </td>
+                <td width="50%" class="center">
+                    _______________________<br>
+                    <strong>{{ tenant_name }}</strong><br>
+                    [Digital Signature / Thumb Impression]<br>
+                    TENANT
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br><br>
+
+    <p><strong>WITNESSES:</strong></p>
+    <ol>
+        <li>________________________<br> (Name of the Witness)</li>
+        <li>________________________<br> (Name of the Witness)</li>
+    </ol>
+
+    <div class="stamp">
+        <strong>Note:</strong> This agreement must be printed on non-judicial stamp paper of ₹{{ stamp_value }} as per state law and registered at the Sub-Registrar office.
+    </div>
+
+</body>
+</html>

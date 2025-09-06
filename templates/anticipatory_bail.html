@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anticipatory Bail Application</title>
+    <style>
+    body { font-family: 'Times New Roman', serif; line-height: 1.8; margin: 1.5cm; }
+    .center { text-align: center; }
+    .underline { text-decoration: underline; }
+    .signature { margin-top: 60px; }
+</style>
+</head>
+<body>
+
+    <div class="center underline">
+        <strong>IN THE HIGH COURT OF {{ jurisdiction.toUpperCase() }}</strong>
+    </div>
+    <br>
+
+    <div class="center">
+        <strong>APPLICATION UNDER SECTION 438 CrPC FOR ANTICIPATORY BAIL</strong>
+    </div>
+    <br>
+
+    <strong>Applicant:</strong> {{ applicant_name }}, {{ applicant_address }}<br>
+    <strong>FIR No:</strong> {{ fir_number }} | <strong>PS:</strong> {{ police_station }}<br>
+    <strong>Sections:</strong> {{ ipc_sections }}<br>
+    <br>
+
+    <strong>1.</strong> That a false FIR has been lodged against the applicant due to personal enmity.<br>
+    <br>
+
+    <strong>2.</strong> That the applicant is a law-abiding citizen with deep roots in society and will not flee.<br>
+    <br>
+
+    <strong>3.</strong> That the applicant is ready and willing to cooperate with the investigation.<br>
+    <br>
+
+    <strong>4.</strong> That no evidence will be tampered with if bail is granted.<br>
+    <br>
+
+    <strong>PRAYER:</strong><br>
+    <ol>
+        <li>That this Hon'ble Court may grant anticipatory bail to the applicant.</li>
+        <li>That the applicant be released on such terms and conditions as deemed fit.</li>
+    </ol>
+    <br>
+
+    <div class="signature">
+    <p style="text-align: right;">Dated: {{ today }}<br>
+    Place: {{ jurisdiction }}</p>
+    <br><br>
+    <p style="text-align: right;">_______________________<br>
+    <strong>{{ applicant_name }}</strong><br>
+    Applicant</p>
+</div>
+
+</body>
+</html>

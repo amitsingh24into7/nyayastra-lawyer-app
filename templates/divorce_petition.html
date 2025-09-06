@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mutual Consent Divorce Petition</title>
+    <style>
+        body { font-family: 'Times New Roman', serif; line-height: 1.8; margin: 1.5cm; }
+        .center { text-align: center; }
+        .underline { text-decoration: underline; }
+        .signature { margin-top: 60px; }
+        .footer { margin-top: 40px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <div class="center underline">
+        <strong>IN THE FAMILY COURT AT {{ jurisdiction }}</strong>
+    </div>
+    <br>
+
+    <div class="center">
+        <strong>PETITION FOR MUTUAL CONSENT DIVORCE<br>UNDER SECTION 13B, HINDU MARRIAGE ACT, 1955</strong>
+    </div>
+    <br>
+
+    <strong>Petitioner:</strong> {{ petitioner_name }}, {{ petitioner_address }}<br>
+    <strong>Respondent:</strong> {{ respondent_name }}, {{ respondent_address }}<br>
+    <strong>Marriage Date:</strong> {{ marriage_date }} | <strong>Marriage Place:</strong> {{ marriage_place }}<br>
+    <strong>Separation Since:</strong> {{ separation_years }} year(s)<br>
+    <br>
+
+    <strong>1.</strong> That the parties were married on <strong>{{ marriage_date }}</strong> at <strong>{{ marriage_place }}</strong> according to Hindu rites.<br>
+    <br>
+
+    <strong>2.</strong> That due to irreconcilable differences, they have been living separately for over one year.<br>
+    <br>
+
+    <strong>3.</strong> That they have mutually agreed to dissolve the marriage and have settled all matters relating to alimony, child custody, and property.<br>
+    <br>
+
+    <strong>4.</strong> That there is no possibility of reconciliation and mutual divorce is in the interest of justice.<br>
+    <br>
+
+    <strong>PRAYER:</strong><br>
+    <ol>
+        <li>That this Hon'ble Court may grant divorce by mutual consent.</li>
+        <li>That the marriage solemnized on {{ marriage_date }} be dissolved.</li>
+        <li>For any other relief this Hon'ble Court deems fit.</li>
+    </ol>
+    <br>
+
+    <div class="signature">
+        <p style="text-align: right;">Dated: {{ today }}<br>
+        Place: {{ jurisdiction }}</p>
+        <br><br>
+        <p style="text-align: right;">_______________________<br>
+        <strong>{{ petitioner_name }}</strong><br>
+        Petitioner</p>
+    </div>
+
+    <div class="footer">
+        <p><strong>VERIFICATION:</strong> I, {{ petitioner_name }}, do hereby verify that the contents of this petition are true to my knowledge.</p>
+        <p>Verified at {{ jurisdiction }} on this {{ today }}.</p>
+    </div>
+
+</body>
+</html>

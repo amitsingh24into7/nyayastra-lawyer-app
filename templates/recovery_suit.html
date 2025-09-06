@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Suit for Recovery of Money</title>
+    <style>
+        body { font-family: 'Times New Roman', serif; line-height: 1.8; margin: 1.5cm; }
+        .center { text-align: center; }
+        .underline { text-decoration: underline; }
+        .signature { margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <div class="center underline">
+        <strong>IN THE COURT OF THE CIVIL JUDGE, {{ jurisdiction }}</strong>
+    </div>
+    <br>
+
+    <div class="center">
+        <strong>SUIT FOR RECOVERY OF MONEY</strong>
+    </div>
+    <br>
+
+    <strong>Plaintiff:</strong> {{ plaintiff_name }}, {{ plaintiff_address }}<br>
+    <strong>Defendant:</strong> {{ defendant_name }}, {{ defendant_address }}<br>
+    <strong>Amount:</strong> ₹{{ amount }} | <strong>Loan Date:</strong> {{ loan_date }}<br>
+    <br>
+
+    <strong>1.</strong> That the defendant borrowed ₹{{ amount }} from the plaintiff on <strong>{{ loan_date }}</strong>.<br>
+    <br>
+
+    <strong>2.</strong> That the defendant promised to repay by <strong>{{ due_date }}</strong> but has failed to do so.<br>
+    <br>
+
+    <strong>3.</strong> That a legal notice was sent on <strong>{{ notice_date }}</strong> but no payment was made.<br>
+    <br>
+
+    <strong>4.</strong> That the plaintiff is entitled to recover the amount with 18% interest per annum.<br>
+    <br>
+
+    <strong>PRAYER:</strong><br>
+    <ol>
+        <li>That the defendant be directed to pay ₹{{ amount }} with 18% interest.</li>
+        <li>That litigation costs be awarded.</li>
+        <li>For any other relief this Hon'ble Court deems fit.</li>
+    </ol>
+    <br>
+
+    <div class="signature">
+        <p style="text-align: right;">Dated: {{ today }}<br>
+        Place: {{ jurisdiction }}</p>
+        <br><br>
+        <p style="text-align: right;">_______________________<br>
+        <strong>{{ plaintiff_name }}</strong><br>
+        Plaintiff</p>
+    </div>
+
+</body>
+</html>

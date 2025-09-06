@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nyaylawyer-deployment
+  labels:
+    app: nyaylawyer
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nyaylawyer
+  template:
+    metadata:
+      labels:
+        app: nyaylawyer
+    spec:
+      containers:
+      - name: nyaylawyer
+        image: akhilbmenon/nyaylawyer.ai:${BUILD_NUMBER}   # Jenkins replaces this
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8502
+        resources:
+        requests:
+          cpu: "500m"
+          memory: "512Mi"
+        limits:
+          cpu: "1"
+          memory: "1Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nyaylawyer-service
+  labels:
+    app: nyaylawyer
+spec:
+  selector:
+    app: nyaylawyer
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8502
+    nodePort: 30007   # Change to LoadBalancer if using cloud
+  type: NodePort
