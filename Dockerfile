@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # ------------------------------------------------------
 # Preinstall PyTorch (CPU version here)
 # ------------------------------------------------------
+RUN pip install --no-cache-dir --upgrade typing-extensions
 RUN pip install --no-cache-dir torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
 
 # Copy requirements first (for caching)
