@@ -41,5 +41,5 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8502
-    nodePort: 30007   # Change to LoadBalancer if using cloud
+    nodePort: 30010   # Change to LoadBalancer if using cloud
   type: NodePort
