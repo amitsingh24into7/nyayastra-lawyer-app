@@ -1,26 +1,35 @@
-## Use Python base image
 FROM python:3.10-slim
+
+# Increase timeout for large wheels like torch
+ENV PIP_DEFAULT_TIMEOUT=1000
 
 # Set working directory
 WORKDIR /app
 
-# Install system packages
+# Install system packages (needed for PyTorch & scientific libs)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    libopenblas-dev \
+    libssl-dev \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy and install Python dependencies
+# ------------------------------------------------------
+# Preinstall PyTorch (CPU version here)
+# ------------------------------------------------------
+RUN pip install --no-cache-dir torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+
+# Copy requirements first (for caching)
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all application code
+# Copy app code
 COPY . .
 
 # Expose Streamlit's default port
 EXPOSE 8502
 
-# Run the Streamlit app
-#CMD ["streamlit", "run", "stock_streamlit_sql.py", "--server.enableCORS", "false"]
+# Start the Streamlit app
 CMD ["streamlit", "run", "app.py", \
      "--server.enableCORS", "false", \
      "--server.enableXsrfProtection", "false", \
