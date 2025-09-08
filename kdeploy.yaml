@@ -16,17 +16,17 @@ spec:
     spec:
       containers:
       - name: nyaylawyer
-        image: akhilbmenon/nyaylawyer.ai:${BUILD_NUMBER}   # Jenkins replaces this
+        image: akhilbmenon/nyaylawyer.ai:${BUILD_NUMBER}
         imagePullPolicy: Always
         ports:
         - containerPort: 8502
         resources:
-        requests:
-          cpu: "500m"
-          memory: "512Mi"
-        limits:
-          cpu: "1"
-          memory: "1Gi"
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            cpu: "1"
+            memory: "1Gi"
 ---
 apiVersion: v1
 kind: Service
@@ -41,5 +41,5 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8502
-    nodePort: 30010   # Change to LoadBalancer if using cloud
+    nodePort: 30010
   type: NodePort
