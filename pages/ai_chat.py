@@ -18,7 +18,7 @@ def show():
         st.chat_message("user").write(prompt)
 
         try:
-            llm = get_llm()
+            llm = get_llm('nyay-pulse')
             system_prompt = "You are Nyastra, a helpful Indian legal assistant. Answer in simple Hindi or English. Cite laws (IPC, CrPC, NI Act). If unsure, say 'Consult a lawyer.'"
             messages = [{"role": "system", "content": system_prompt}] + st.session_state.chat_history
             response = llm.invoke(messages)
