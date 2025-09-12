@@ -121,6 +121,8 @@ try:
         from pages.case_tracking import show
     elif selected == "document_gen":
         from pages.document_gen import show
+    elif selected == "db_test":
+        from pages.db_test import show
     else:
         from pages.dashboard import show  # fallback
 
