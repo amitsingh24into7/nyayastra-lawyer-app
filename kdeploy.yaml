@@ -16,37 +16,17 @@ spec:
     spec:
       containers:
       - name: nyaylawyer
-        image: akhilbmenon/nyaylawyer.ai:${BUILD_NUMBER}
+        image: akhilbmenon/nyaylawyer.ai:${BUILD_NUMBER}   # Jenkins replaces this
         imagePullPolicy: Always
         ports:
         - containerPort: 8502
-        env:
-        - name: PORT
-          value: "8502"
         resources:
-          requests:
-            cpu: "500m"
-            memory: "512Mi"
-          limits:
-            cpu: "1"
-            memory: "1Gi"
-        # Health Probes
-        readinessProbe:
-          httpGet:
-            path: /healthz
-            port: 8502
-          initialDelaySeconds: 1200
-          periodSeconds: 15
-          timeoutSeconds: 10
-          failureThreshold: 10
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 8502
-          initialDelaySeconds: 150
-          periodSeconds: 30
-          timeoutSeconds: 10
-          failureThreshold: 6
+        requests:
+          cpu: "500m"
+          memory: "512Mi"
+        limits:
+          cpu: "1"
+          memory: "1Gi"
 ---
 apiVersion: v1
 kind: Service
@@ -58,8 +38,8 @@ spec:
   selector:
     app: nyaylawyer
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8502
-      nodePort: 30010
+  - protocol: TCP
+    port: 80
+    targetPort: 8502
+    nodePort: 30010   # Change to LoadBalancer if using cloud
   type: NodePort
