@@ -23,7 +23,8 @@ COPY requirements.txt .
 # Install Python dependencies including PyTorch
 RUN pip install --no-cache-dir --upgrade typing-extensions && \
     pip install --no-cache-dir torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install streamlit-option-menu
 
 # Copy app code
 COPY . .
