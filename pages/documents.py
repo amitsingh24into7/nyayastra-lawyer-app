@@ -37,7 +37,7 @@ def show():
             if st.button("🔍 Generate AI Summary"):
                 with st.spinner("Analyzing document..."):
                     try:
-                        llm = get_llm()
+                        llm = get_llm('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')
                         prompt = f"""
                         Summarize this legal document in simple English and Hindi.
                         Highlight: parties, court, dates, key facts, legal issues.
@@ -64,7 +64,7 @@ def show():
             st.session_state.doc_qa.append({"role": "user", "content": q})
             st.chat_message("user").write(q)
             try:
-                llm = get_llm()
+                llm = get_llm('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')
                 prompt = f"""
                 Based on this legal document:
                 {st.session_state.doc_text[:5000]}

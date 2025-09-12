@@ -31,4 +31,3 @@ supabase
 jinja2
 pdfkit
 weasyprint
-pdfkit

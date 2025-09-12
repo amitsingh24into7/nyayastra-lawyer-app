@@ -6,7 +6,7 @@ load_dotenv()
 
 # --- SET PAGE CONFIG ---
 st.set_page_config(
-    page_title="Nyastra Pulse",
+    page_title="Nyayastra Pulse",
     page_icon="⚖️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -62,7 +62,7 @@ st.markdown(
 
 # --- LOGIN SCREEN ---
 if not st.session_state.logged_in:
-    st.markdown("<h1 style='text-align: center; color: #1e3a8a;'>⚖️ Nyastra Pulse</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #1e3a8a;'>⚖️ Nyayastra Pulse</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; font-size: 1.2rem;'>India's AI-Powered Legal Assistant</p>", unsafe_allow_html=True)
     st.divider()
 
@@ -74,6 +74,30 @@ if not st.session_state.logged_in:
             submit = st.form_submit_button("🔐 Login", use_container_width=True)
             if submit:
                 login(st.session_state.username_input, st.session_state.password_input)
+            st.markdown(
+    """
+    <div style="padding: 0.5rem 1rem;">
+        <a href="https://forms.gle/your-lawyer-registration-form-link" target="_blank" style="text-decoration: none;">
+            <div style="
+                background: #2563EB;
+                color: white;
+                padding: 0.75rem;
+                border-radius: 12px;
+                text-align: center;
+                font-weight: 600;
+                font-size: 14px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            ">
+                📝 Register as a Lawyer
+            </div>
+        </a>
+    </div>
+    <p style="text-align: center; color: #64748B; margin-top: 1rem;">
+        Nyayastra • Know your case. Take action.
+    </p>
+    """,
+    unsafe_allow_html=True
+)
     st.stop()
 
 # --- AFTER LOGIN ---
@@ -111,6 +135,6 @@ except Exception as e:
 # --- FOOTER ---
 st.divider()
 st.markdown(
-    "<p style='text-align: center; color: #64748B;'>Nyastra • Know your case. Take action.</p>",
+    "<p style='text-align: center; color: #64748B;'>Nyayastra • Know your case. Take action.</p>",
     unsafe_allow_html=True
 )
